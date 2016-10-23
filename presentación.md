@@ -5,7 +5,8 @@
 # ==Base de datos== para tu proyecto
 
 - ¿Qué es una base de datos?
-- BD u hojas de calculo
+- Ventajas de un BD
+- Base de datos por sobre hojas de calculo
 - Implementación
 	1. Pico
 
@@ -20,7 +21,20 @@ Es un almacén en el que se guardan grandes cantidades de información de manera
 
 ---
 
-# Ejemplo de tabla única
+# Ventajas de una BD
+       
+       
+       
+       
+       
+- Evita la **redundancia** de datos
+- Permite hacer consultas complejas para el **análisis del contenido**
+- Permite establecer reglas a la hora de **trabajar en equipo**
+
+---
+
+
+## Ejemplo de tabla única
 
 Nombre Paciente| Tipo | Síntomas | Medico | Rut | E.C. | Sueldo
 -------------- | ---- | ------ | ----- | ----| ------| --------
@@ -30,7 +44,7 @@ Toby | Canino | No come | Juan Piedra | 15.533.559-5 | Soltero | $700.000
 
 ---
 
-#  Ejemplo con más de una tabla
+##  Ejemplo con más de una tabla
 
 Nombre Paciente| Tipo | Síntomas | Medico
 -------------- | ---- | ------ | -------
@@ -47,6 +61,9 @@ Juan Piedra | 15.533.559-5 | Soltero | $700.000
 
 ---
 
+
+
+---
 [https://www.gcfaprendelibre.org/tecnologia/curso/access_2010/trabajar_con_bases_de_datos/1.do]
 
 

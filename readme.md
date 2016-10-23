@@ -6,6 +6,10 @@ Es una herramienta para recopilar y organizar grandes cantidades de información
 
 Es una buena opción  cuando se debe  registrar y modificar datos con regularidad y después obtener subconjuntos de estos datos.
 
+<p align="center">
+	<img src="images/relational-database-model1.png"  height="400">
+</p>
+
 ## Componentes de una Base de datos
 
 Una BD esta compuesta principalmente por entidades que es la representación de un objeto y esta tiene atributos las cuales dan propiedades a ese objeto.
@@ -14,10 +18,16 @@ Las entidades no están solas, se relacionan entre ellas a través de relaciones
 
 Las relaciones por lo general tienen a desaparecer en la implementación de una BD.
 
+![140% center](images/rel.png)
+-
 ## Entidad como una tabla
 
-Un entidad puede ser representada como una tabla, en donde sus atributos son sus columnas, la ocurrencia de la entidad son sus filas.s
+Un entidad puede ser representada como una tabla, en donde sus atributos son sus columnas, la ocurrencia de la entidad son sus filas.
 
+Rut | Nombre | Ocupación | Peso
+--- | ------ | --------- | -------
+15.654.896-6  |   Juan     |  Trabajador | 70
+23.459.786-1 |    Maria   |     Estudiante | 60
 
 ## Porqué usar una base de datos en tu proyecto
 

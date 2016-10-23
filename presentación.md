@@ -39,6 +39,23 @@ Es una herramienta para recopilar y organizar grandes cantidades de información
 
 <br />
 
+
+
+#### Entidad Persona
+
+<center>
+
+Rut | Nombre | Ocupación | Peso
+--- | ------ | --------- | -------
+15.654.896-6  |   Juan     |  Trabajador | 70
+23.459.786-1 |    Maria   |     Estudiante | 60
+    
+</center>
+
+
+---
+
+
 #### Entidad ratón
 
 <center>

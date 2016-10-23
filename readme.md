@@ -1,4 +1,4 @@
-# Para tu huea cientifica
+# Base de dato para tu proyecto científico
 
 ## Qué es una BD
 
@@ -19,7 +19,7 @@ Toby | Canino | No come | Juan Piedra | 15.533.559-5 | Soltero | $700.000
 - Ejemplo con más de una tabla
 
 Nombre Paciente| Tipo | Síntomas | Medico
--------------- | ---- | ------
+-------------- | ---- | ------ | -------
 Sasha | Felino | Vomito, cansancio, pelo caído | Álvaro Pérez
 Luna | Felino | Un poco vaga | Álvaro Pérez
 Toby | Canino | No come | Juan Piedra
@@ -30,3 +30,6 @@ Medico | Rut | E.C. | Sueldo
 Juan Piedra | 15.533.559-5 | Soltero | $700.000
 
 Como se puede apreciar, cuando se usa más de una tabla se pudo obtener los datos que realmente se necesitan en el instante y además como las dos tablas tienen el mismo campo (Medico) entonces es posible establecer una relación entre ambas tablas (poder hacer búsquedas cruzadas).
+
+
+## Base de datos vs Hoja de Calculo

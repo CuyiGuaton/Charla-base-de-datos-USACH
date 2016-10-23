@@ -1,0 +1,828 @@
+\documentclass[ignorenonframetext,]{beamer}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\newif\ifbibliography
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{{#1}}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{{#1}}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{{#1}}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{{#1}}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{{#1}}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{{#1}}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{{#1}}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{{#1}}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{{#1}}}
+\newcommand{\ImportTok}[1]{{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{{#1}}}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{{#1}}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{{#1}}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{{#1}}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{{#1}}}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{{#1}}}}
+\newcommand{\BuiltInTok}[1]{{#1}}
+\newcommand{\ExtensionTok}[1]{{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{{#1}}}
+\newcommand{\RegionMarkerTok}[1]{{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\NormalTok}[1]{{#1}}
+\usepackage{longtable,booktabs}
+\usepackage{caption}
+% These lines are needed to make table captions work with longtable:
+\makeatletter
+\def\fnum@table{\tablename~\thetable}
+\makeatother
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight0.8\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+
+% Prevent slide breaks in the middle of a paragraph:
+\widowpenalties 1 10000
+\raggedbottom
+
+% Comment these out if you don't want a slide with just the
+% part/section/subsection/subsubsection title:
+\AtBeginPart{
+  \let\insertpartnumber\relax
+  \let\partname\relax
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \let\insertsectionnumber\relax
+    \let\sectionname\relax
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \let\insertsubsectionnumber\relax
+  \let\subsectionname\relax
+  \frame{\subsectionpage}
+}
+
+\usepackage[normalem]{ulem}
+% avoid problems with \sout in headers with hyperref:
+\pdfstringdefDisableCommands{\renewcommand{\sout}{}}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+
+\title{Habits}
+\author{John Doe}
+\date{March 22, 2005}
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}{Base de datos para tu proyecto}
+
+\begin{itemize}
+\tightlist
+\item
+  Â¿QuÃ© es una base de datos?
+\item
+  BD u hojas de calculo
+\item
+  ImplementaciÃ³n
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \tightlist
+  \item
+    Pico
+  \end{enumerate}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{==Base de dato== vs hoja de calculo}
+
+\begin{longtable}[c]{@{}lllllll@{}}
+\toprule
+\begin{minipage}[b]{0.17\columnwidth}\raggedright\strut
+Nombre Paciente
+\strut\end{minipage} &
+\begin{minipage}[b]{0.06\columnwidth}\raggedright\strut
+Tipo
+\strut\end{minipage} &
+\begin{minipage}[b]{0.08\columnwidth}\raggedright\strut
+SÃ­ntomas
+\strut\end{minipage} &
+\begin{minipage}[b]{0.07\columnwidth}\raggedright\strut
+Medico
+\strut\end{minipage} &
+\begin{minipage}[b]{0.06\columnwidth}\raggedright\strut
+Rut
+\strut\end{minipage} &
+\begin{minipage}[b]{0.08\columnwidth}\raggedright\strut
+E.C.
+\strut\end{minipage} &
+\begin{minipage}[b]{0.10\columnwidth}\raggedright\strut
+Sueldo
+\strut\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+Sasha
+\strut\end{minipage} &
+\begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+Felino
+\strut\end{minipage} &
+\begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
+Vomito, cansancio, pelo caÃ­do
+\strut\end{minipage} &
+\begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+Ãlvaro PÃ©rez
+\strut\end{minipage} &
+\begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+16.336.789-7
+\strut\end{minipage} &
+\begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
+Soltero
+\strut\end{minipage} &
+\begin{minipage}[t]{0.10\columnwidth}\raggedright\strut
+\$500.000
+\strut\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+Luna
+\strut\end{minipage} &
+\begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+Felino
+\strut\end{minipage} &
+\begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
+Un poco vaga
+\strut\end{minipage} &
+\begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+Ãlvaro PÃ©rez
+\strut\end{minipage} &
+\begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+16.336.789-7
+\strut\end{minipage} &
+\begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
+Soltero
+\strut\end{minipage} &
+\begin{minipage}[t]{0.10\columnwidth}\raggedright\strut
+\$500.000
+\strut\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+Toby
+\strut\end{minipage} &
+\begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+Canino
+\strut\end{minipage} &
+\begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
+No come
+\strut\end{minipage} &
+\begin{minipage}[t]{0.07\columnwidth}\raggedright\strut
+Juan Piedra
+\strut\end{minipage} &
+\begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
+15.533.559-5
+\strut\end{minipage} &
+\begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
+Soltero
+\strut\end{minipage} &
+\begin{minipage}[t]{0.10\columnwidth}\raggedright\strut
+\$700.000
+\strut\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\end{frame}
+
+\begin{frame}
+
+{[}\url{https://www.gcfaprendelibre.org/tecnologia/curso/access_2010/trabajar_con_bases_de_datos/1.do}{]}
+
+\end{frame}
+
+\begin{frame}{Marp}
+
+\end{frame}
+
+\begin{frame}{\includegraphics{images/marp.png}}
+
+\begin{block}{Markdown presentation writer, powered by
+\href{http://electron.atom.io/}{Electron}}
+
+\begin{block}{Created by Yuki Hattori (
+{[}@yhatt{]}(\url{https://github.com/yhatt}) )}
+
+\end{block}
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}{Features}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Slides are written in Markdown.}
+\item
+  Cross-platform. Supports Windows, Mac, and Linux
+\item
+  Live Preview with 3 modes
+\item
+  Slide themes (\texttt{default}, \texttt{gaia}) and custom background
+  images
+\item
+  Supports emoji :heart:
+\item
+  Render maths in your slides
+\item
+  Export your slides to PDF
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{How to write slides?}
+
+Split slides by horizontal ruler \texttt{-\/-\/-}. It's very simple.
+
+\begin{verbatim}
+# Slide 1
+
+foobar
+
+---
+
+# Slide 2
+
+foobar
+\end{verbatim}
+
+\begin{quote}
+\emph{Notice: Ruler (\texttt{\textless{}hr\textgreater{}}) is not
+displayed in Marp.}
+\end{quote}
+
+\end{frame}
+
+\begin{frame}[fragile]{Directives}
+
+Marp's Markdown has extended directives to affect slides.
+
+Insert HTML comment as below:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{<!-- \{directive_name\}: \{value\} -->}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{<!--}
+\CommentTok{\{first_directive_name\}:  \{value\}}
+\CommentTok{\{second_directive_name\}: \{value\}}
+\CommentTok{...}
+\CommentTok{-->}
+\end{Highlighting}
+\end{Shaded}
+
+\end{frame}
+
+\begin{frame}[fragile]
+
+\begin{block}{Global Directives}
+
+\begin{block}{\texttt{\$theme}}
+
+Changes the theme of all the slides in the deck. You can also change
+from \texttt{View\ -\textgreater{}\ Theme} menu.
+
+\begin{verbatim}
+<!-- $theme: gaia -->
+\end{verbatim}
+
+\begin{longtable}[c]{@{}ccl@{}}
+\toprule
+Theme name & Value & Directive\tabularnewline
+\midrule
+\endhead
+\textbf{\emph{Default}} & default &
+\texttt{\textless{}!-\/-\ \$theme:\ default\ -\/-\textgreater{}}\tabularnewline
+\textbf{Gaia} & gaia &
+\texttt{\textless{}!-\/-\ \$theme:\ gaia\ -\/-\textgreater{}}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\end{block}
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]
+
+\begin{block}{\texttt{\$width} / \texttt{\$height}}
+
+Changes width and height of all the slides.
+
+You can use units: \texttt{px} (default), \texttt{cm}, \texttt{mm},
+\texttt{in}, \texttt{pt}, and \texttt{pc}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{<!-- $width: 12in -->}
+\end{Highlighting}
+\end{Shaded}
+
+\end{block}
+
+\begin{block}{\texttt{\$size}}
+
+Changes slide size by presets.
+
+Presets: \texttt{4:3}, \texttt{16:9}, \texttt{A0}-\texttt{A8},
+\texttt{B0}-\texttt{B8} and suffix of \texttt{-portrait}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{<!-- $size: 16:9 -->}
+\end{Highlighting}
+\end{Shaded}
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]
+
+\begin{block}{Page Directives}
+
+The page directive would apply to the \textbf{current page and the
+following pages}. You should insert it \emph{at the top} to apply it to
+all slides.
+
+\begin{block}{\texttt{page\_number}}
+
+Set \texttt{true} to show page number on slides. \emph{See lower right!}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{<!-- page_number: true -->}
+\end{Highlighting}
+\end{Shaded}
+
+\end{block}
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]
+
+\begin{block}{\texttt{template}}
+
+Set to use template of theme.
+
+The \texttt{template} directive just enables that using theme supports
+templates.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{<!--}
+\CommentTok{$theme: gaia}
+\CommentTok{template: invert}
+\CommentTok{-->}
+
+\NormalTok{Example: Set "invert" template of Gaia theme.}
+\end{Highlighting}
+\end{Shaded}
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]
+
+\begin{block}{\texttt{footer}}
+
+Add a footer to the current slide and all of the following slides
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{<!-- footer: This is a footer -->}
+\end{Highlighting}
+\end{Shaded}
+
+Example: Adds ``This is a footer'' in the bottom of each slide
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]
+
+\begin{block}{\texttt{prerender}}
+
+Pre-renders a slide, which can prevent issues with very large background
+images.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{<!-- prerender: true -->}
+\end{Highlighting}
+\end{Shaded}
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]
+
+\begin{block}{Pro Tips}
+
+\begin{block}{Apply page directive to current slide only}
+
+Page directive can be selectively applied to the current slide by
+prefixing the page directive with \texttt{*}.
+
+\begin{verbatim}
+<!-- *page_number: false -->
+<!-- *template: invert -->
+\end{verbatim}
+
+\end{block}
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]
+
+\begin{block}{Slide background Images}
+
+You can set an image as a slide background.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{![bg](mybackground.png)}
+\end{Highlighting}
+\end{Shaded}
+
+Options can be provided after \texttt{bg}, for example
+\texttt{!{[}bg\ original{]}(path)}.
+
+Options include:
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{original} to include the image without any effects
+\item
+  \texttt{x\%} to include the image at \texttt{x} percent of the slide
+  size
+\end{itemize}
+
+Include multiple\texttt{!{[}bg{]}(path)} tags to stack background images
+horizontally.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{images/background.png}
+\caption{bg}
+\end{figure}
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]
+
+\begin{block}{Maths Typsetting}
+
+Mathematics is typeset using the \texttt{KaTeX} package. Use \texttt{\$}
+for inline maths, such as \(ax^2+bc+c\), and \texttt{\$\$} for block
+maths:
+
+\[I_{xx}=\int\int_Ry^2f(x,y)\cdot{}dydx\]
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{This is inline: $ax^2+bx+c$, and this is block:}
+
+\NormalTok{$$I_\{xx\}=\textbackslash{}int\textbackslash{}int_Ry^2f(x,y)\textbackslash{}cdot\{\}dydx$$}
+\end{Highlighting}
+\end{Shaded}
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+
+\begin{block}{Enjoy writing slides! :+1:}
+
+\begin{block}{\url{https://github.com/yhatt/marp}}
+
+Copyright © 2016 \href{https://github.com/yhatt}{Yuki Hattori} This
+software released under the
+\href{https://github.com/yhatt/marp/blob/master/LICENSE}{MIT License}.
+
+\end{block}
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}{Introducing ==Gaia== theme}
+
+\begin{block}{Marp's new slide theme}
+
+\begin{block}{Created by {[}Yuki Hattori
+(@yhatt){]}(\url{https://github.com/yhatt})}
+
+\end{block}
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}{Overview}
+
+\textbf{Gaia} is the beautiful presentation theme on Marp!
+
+\begin{itemize}
+\tightlist
+\item
+  ==\textbf{New features}==
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \tightlist
+  \item
+    Title Slides
+  \item
+    Highlight
+  \item
+    Color scheme
+  \end{enumerate}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{How to use}
+
+\begin{block}{From menu}
+
+Select menu: \emph{View :arrow\_right: Theme :arrow\_right: Gaia}
+
+\end{block}
+
+\begin{block}{Use directive}
+
+Set \texttt{gaia} theme by \texttt{\$theme} Global Directive.
+
+\begin{verbatim}
+<!-- $theme: gaia -->
+\end{verbatim}
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}{Basic example 1}
+
+\textbf{Lorem ipsum} dolor \emph{sit} amet, \textbf{\emph{consectetur}}
+adipiscing elit, sed do \texttt{eiusmod} tempor ==incididunt== ut labore
+et dolore \sout{magna aliqua}. :smile:
+
+\begin{quote}
+Stay Hungry. Stay Foolish. \emph{--Steve Jobs (2005)}
+\end{quote}
+
+\begin{itemize}
+\tightlist
+\item
+  List A
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \tightlist
+  \item
+    \href{https://yhatt.github.io/marp/}{Sub list}
+  \item
+    Sub list
+
+    \begin{itemize}
+    \tightlist
+    \item
+      \emph{More Sub list}
+    \end{itemize}
+  \end{enumerate}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Basic example 2}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\VariableTok{document}\NormalTok{.}\AttributeTok{write}\NormalTok{(}\StringTok{'Hello, world!'}\NormalTok{)}\OperatorTok{;}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{longtable}[c]{@{}lcr@{}}
+\toprule
+\begin{minipage}[b]{0.05\columnwidth}\raggedright\strut
+table
+\strut\end{minipage} &
+\begin{minipage}[b]{0.05\columnwidth}\centering\strut
+layout
+\strut\end{minipage} &
+\begin{minipage}[b]{0.05\columnwidth}\raggedleft\strut
+example
+\strut\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+align to left
+\strut\end{minipage} &
+\begin{minipage}[t]{0.05\columnwidth}\centering\strut
+align to center
+\strut\end{minipage} &
+\begin{minipage}[t]{0.05\columnwidth}\raggedleft\strut
+align to right
+\strut\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.05\columnwidth}\raggedright\strut
+:arrow\_left: left
+\strut\end{minipage} &
+\begin{minipage}[t]{0.05\columnwidth}\centering\strut
+:arrow\_left: center :arrow\_right:
+\strut\end{minipage} &
+\begin{minipage}[t]{0.05\columnwidth}\raggedleft\strut
+right :arrow\_right:
+\strut\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{../images/marp.png}
+\caption{70\% center}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{==e.g.== This page :yum:}
+
+\end{frame}
+
+\begin{frame}
+
+\begin{block}{==Apply centering== to the pagethat has only headings!}
+
+\begin{block}{Useful to title slide. :laughing:}
+
+\end{block}
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]
+
+\begin{quote}
+\textbf{==Tips:==} Apply vertical centering to quote only page too.
+\end{quote}
+
+\begin{block}{Highlight Markup}
+
+You can use \texttt{==} for ==highlighting blue==.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{==This is highlight markup.==}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{block}{Notice}
+
+\emph{Marp would show yellow marker highlight in Markdown view or
+default slide theme.}
+
+\end{block}
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]{==Color== scheme templates}
+
+Change color scheme \emph{by \texttt{template} page directive.}
+
+\begin{verbatim}
+<!-- template: default -->
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Default} :arrow\_left: This page
+\item
+  Invert
+\item
+  Gaia (Theme color)
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{==Color== scheme templates}
+
+Change color scheme \emph{by \texttt{template} page directive.}
+
+\begin{verbatim}
+<!-- template: gaia -->
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  Default
+\item
+  Invert
+\item
+  \textbf{Gaia} (Theme color) :arrow\_left: This page
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{==That's all!==}
+
+\begin{block}{Let's create beautiful slideswith ==Marp== + ==Gaia==
+theme!}
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+
+\begin{block}{\texttt{\textless{}!-\/-\ \$theme:\ gaia\ -\/-\textgreater{}}
+of Marp}
+
+\begin{block}{\href{https://yhatt.github.io/marp}{\includegraphics{../images/marp.png}}}
+
+\end{block}
+
+\end{block}
+
+\begin{block}{\url{https://yhatt.github.io/marp}}
+
+\end{block}
+
+\end{frame}
+
+\end{document}

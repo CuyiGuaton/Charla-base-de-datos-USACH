@@ -1,0 +1,53 @@
+---
+title: "presentacion"
+author: "Sergio Salinas"
+date: "23 de octubre de 2016"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## pico 
+
+- ¿Qué es una base de datos?
+- BD u hojas de calculo
+- Implementación
+
+
+## ¿Qué es una base de datos?
+
+Es un almacén en el que se guardan grandes cantidades de información de manera estructurada y con la menor redundancia posible.
+ 
+<p align="center">
+	<img src="images/relational-database-model1.png"  height="400">
+</p>
+ 
+## R Markdown
+
+Nombre Paciente| Tipo | Síntomas | Medico | Rut | E.C. | Sueldo
+-------------- | ---- | ------ | ----- | ----| ------| --------
+Sasha | Felino | Vomito, cansancio, pelo caído | Álvaro Pérez | 16.336.789-7 | Soltero | $500.000
+Luna | Felino | Un poco vaga | Álvaro Pérez | 16.336.789-7 | Soltero | $500.000
+Toby | Canino | No come | Juan Piedra | 15.533.559-5 | Soltero | $700.000
+
+## Slide with Bullets
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
+

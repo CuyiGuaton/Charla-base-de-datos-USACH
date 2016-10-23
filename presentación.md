@@ -1,7 +1,6 @@
 <!-- $theme: gaia -->
 <!-- $size: 16:9 -->
 
-
 # ==Base de datos== para tu proyecto
 
 - ¿Qué es una base de datos?
@@ -16,14 +15,26 @@
 
 ---
 <!-- *template: invert -->
+
+
 # ¿Qué es una base de datos?
 
 Es una herramienta para recopilar y organizar grandes cantidades de información de manera estructurada y con la menor redundancia posible.
-<p align="center">
-	<img src="images/relational-database-model1.png"  height="400">
-</p>
+
+
+![80% center](images/relational-database-model1.png)
 
 ---
+<!-- *template: invert -->
+
+|Theme name|Value|Directive|
+|:-:|:-:|:-|
+|***Default***|default|`<!-- $theme: default -->`
+|**Gaia**|gaia|`<!-- $theme: gaia -->`
+
+---
+
+
 # Componentes de una ==Base de datos==
 
 - **Entidades** Son objetos o "cosas"
@@ -37,46 +48,24 @@ Es una herramienta para recopilar y organizar grandes cantidades de información
 # Entidad como tabla
 
 
-<br />
-
-
 
 #### Entidad Persona
 
-<center>
+|Rut | Nombre | Ocupación | Peso |
+|:-: | :-: | :-: | :-: |
+|15.654.896-6  |   Juan     |  Trabajador | 70 |
+|23.459.786-1 |    Maria   |     Estudiante | 60 
 
-Rut | Nombre | Ocupación | Peso
---- | ------ | --------- | -------
-15.654.896-6  |   Juan     |  Trabajador | 70
-23.459.786-1 |    Maria   |     Estudiante | 60
-    
-</center>
-
-
----
-
-
-#### Entidad ratón
-
-<center>
-
-Nombre raton  | Peso | Raza | Color
------ | ------ | ------- | -------
-Alfajor | 0.5 kg |  Mus musculus |  Blanco
- Tomas | 1.5 kg |  Cricetinae |  Gris 
- 
- </center>
- 
- 
 ---
 
 # Porqué usar una base de datos en tu proyecto
-  
+
 - Evita la **redundancia** de datos
 - Permite hacer consultas complejas para el **análisis del contenido**
 - Permite establecer reglas a la hora de **trabajar en equipo**
 
 ---
+
 
 ## Ejemplo de tabla única con redundancia
 
@@ -86,17 +75,20 @@ Sasha | Felino | Vomito, cansancio | Álvaro Pérez | 16.336.789-7 | Soltero | $
 Luna | Felino | Un poco vaga | Álvaro Pérez | 16.336.789-7 | Soltero | $500.000
 Toby | Canino | No come | Juan Piedra | 15.533.559-5 | Soltero | $700.000
 
+
 ---
+
 
 ##  Ejemplo con más de una tabla sin redundancia
 
 ##### Entidad Paciente
+
 Nombre Paciente| Tipo | Síntomas | Medico
 -------------- | ---- | ------ | -------
 Sasha | Felino | Vomito, cansancio | Álvaro Pérez
 Luna | Felino | Un poco vaga | Álvaro Pérez
 Toby | Canino | No come | Juan Piedra
-<br />
+
 
 ##### Entidad Medico
 
@@ -106,14 +98,17 @@ Medico | Rut | E.C. | Sueldo
 Juan Piedra | 15.533.559-5 | Soltero | $700.000
 
 ---
+
+
 ## Base de datos por sobre hojas de calculo
 
-<br />
 
 ![140% center](images/excel-worlds-most-used-database.jpg)
 
 ---
-# Inplementación
+
+
+# Implementación
 
 
 ---

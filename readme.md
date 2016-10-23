@@ -19,7 +19,8 @@ Las entidades no están solas, se relacionan entre ellas a través de relaciones
 Las relaciones por lo general tienen a desaparecer en la implementación de una BD.
 
 ![140% center](images/rel.png)
--
+
+
 ## Entidad como una tabla
 
 Un entidad puede ser representada como una tabla, en donde sus atributos son sus columnas, la ocurrencia de la entidad son sus filas.

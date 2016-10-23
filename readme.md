@@ -24,8 +24,8 @@ Sasha | Felino | Vomito, cansancio, pelo caído | Álvaro Pérez
 Luna | Felino | Un poco vaga | Álvaro Pérez
 Toby | Canino | No come | Juan Piedra
 
- Medico | Rut | E.C. | Sueldo
- ---- | ------ | -------- | -------
+Medico | Rut | E.C. | Sueldo
+---- | ------ | -------- | -------
 Álvaro Pérez | 16.336.789-7 | Soltero | $500.000
 Juan Piedra | 15.533.559-5 | Soltero | $700.000
 

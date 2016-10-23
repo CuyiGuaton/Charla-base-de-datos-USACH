@@ -24,9 +24,6 @@ Es un almacén en el que se guardan grandes cantidades de información de manera
 # Ventajas de una BD
        
        
-       
-       
-       
 - Evita la **redundancia** de datos
 - Permite hacer consultas complejas para el **análisis del contenido**
 - Permite establecer reglas a la hora de **trabajar en equipo**
@@ -60,11 +57,17 @@ Medico | Rut | E.C. | Sueldo
 Juan Piedra | 15.533.559-5 | Soltero | $700.000
 
 ---
+## Base de datos por sobre hojas de calculo
 
+<br />
+
+
+![120% center](images/excel-worlds-most-used-database.jpg)
 
 
 ---
-[https://www.gcfaprendelibre.org/tecnologia/curso/access_2010/trabajar_con_bases_de_datos/1.do]
+https://www.gcfaprendelibre.org/tecnologia/curso/access_2010/trabajar_con_bases_de_datos/1.do
+
 
 
 ---

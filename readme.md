@@ -43,3 +43,12 @@ Como se puede apreciar, cuando se usa más de una tabla se pudo obtener los dato
 
 
 ## Base de datos por sobre una hoja de calculo.
+
+Debido a su facilidad la gente tiende a usar hojas de calculo al inicio de un proyecto, pero estas se vuelven ineficiente a medida que se van agregando más y más datos.
+
+Esto se debe a que las hojas de calculo no están hecha para administrar grandes cantidades de datos, sino para el cálculo y el análisis de los datos.
+
+
+Aun así ambas herramientas no son excluyentes sino que son complementarias, tanto libreoffice base como access le permiten búsquedas cruzadas entre tablas de la base de datos y el resultado llevarlo a una hoja de calculo en el que pueda analizar los datos con las herramientas de esta.
+
+## Imp´lementación

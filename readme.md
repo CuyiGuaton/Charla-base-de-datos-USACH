@@ -2,11 +2,24 @@
 
 ## Qué es una BD
 
-Es un banco de información en el que se guardan grandes cantidades de información de manera estructurada y con la menor redundancia posible. Esto nos permite acceder a información que necesitamos de manera rápida y cómoda.
+Es una herramienta para recopilar y organizar grandes cantidades de información de manera estructurada y con la menor redundancia posible. Esto nos permite acceder a información que necesitamos de manera rápida y cómoda.
 
 Es una buena opción  cuando se debe  registrar y modificar datos con regularidad y después obtener subconjuntos de estos datos.
 
-# Porqué usar una base de datos en tu proyecto
+## Componentes de una Base de datos
+
+Una BD esta compuesta principalmente por entidades que es la representación de un objeto y esta tiene atributos las cuales dan propiedades a ese objeto.
+
+Las entidades no están solas, se relacionan entre ellas a través de relaciones, que se encargan de **esclarecer** el vinculo entre dos o más entidades.
+
+Las relaciones por lo general tienen a desaparecer en la implementación de una BD.
+
+## Entidad como una tabla
+
+Un entidad puede ser representada como una tabla, en donde sus atributos son sus columnas, la ocurrencia de la entidad son sus filas.s
+
+
+## Porqué usar una base de datos en tu proyecto
 
 - Una base de datos te va a evitar la **redundancia** generada al mezclar todos los datos que tengas en una sola hoja de calculo.
 
@@ -51,4 +64,6 @@ Esto se debe a que las hojas de calculo no están hecha para administrar grandes
 
 Aun así ambas herramientas no son excluyentes sino que son complementarias, tanto libreoffice base como access le permiten búsquedas cruzadas entre tablas de la base de datos y el resultado llevarlo a una hoja de calculo en el que pueda analizar los datos con las herramientas de esta.
 
-## Imp´lementación
+## Modelamiento
+
+Un equipo de investigación esta estudiando el comportamiento de una población de huarenes

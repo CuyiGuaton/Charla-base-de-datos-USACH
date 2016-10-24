@@ -36,44 +36,7 @@ Es una herramienta para recopilar y organizar grandes cantidades de información
 
 \end{frame}
 
-
-\begin{frame}{Componentes de una Base de Datos}
-
-Es una herramienta para recopilar y organizar grandes cantidades de información de manera estructurada y con la menor redundancia posible.
-
-
-\begin{itemize}
-
-\item \textbf{Entidades} Son objetos o cosas. Persona, auto, Habitad, Paciente
-
-\item \textbf{Atributos} Le dan propiedades a la entidad. Persona tiene rut, nombre, peso, etc.
-
-\item  \textbf{Relaciones} Establecen la relación entre dos entidades
-
-
-\end{itemize}
-
-\end{frame}
-
-
-\begin{frame}{Entidad como Una tabla}
-\begin{table}[!H]
-\begin{tabular}{|c|c|c|c|}
-\hline
-\multicolumn{4}{|l|}{Persona} \\ \hline
-\hline 
-Rut & Nombre & Ocupación & Peso \\ 
-\hline 
-15.654.896-6 & Juan & Trabajador & 70 \\ 
-\hline 
-23.459.786-1 & Maria & Estudiante & 60 \\ 
-\hline 
-\end{tabular} 
-\end{table}
-
-\end{frame}
-
-\begin{frame}{Porqué usar una base de datos en tu proyecto}
+\begin{frame}{Base de datos dentro de un proyecto científico}
 
 \begin{itemize}
 
@@ -83,6 +46,8 @@ Rut & Nombre & Ocupación & Peso \\
 \end{itemize}
 
 \end{frame}
+
+
 
 \begin{frame}{Ejemplo de tabla única}
 
@@ -136,6 +101,64 @@ Toby            & Canino & No come                       & Juan Piedra  \\ \hlin
 \end{table}
 \end{frame}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{frame}{Componentes de una Base de Datos}
+
+
+\begin{itemize}
+
+\item \textbf{Entidades} Son objetos o cosas. Persona, auto, Habitad, Paciente
+
+\item \textbf{Atributos} Le dan propiedades a la entidad. Persona tiene rut, nombre, peso, etc.
+
+\item \textbf{Identificadores} Atributo que permite diferenciar una instancia de otra en una entidad. Una se puede diferenciar de otra por su rut.
+
+\item  \textbf{Relaciones} Establecen la conexión entre dos o más entidades
+
+
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Entidad como Una tabla}
+\begin{table}[!H]
+\begin{tabular}{|c|c|c|c|}
+\hline
+\multicolumn{4}{|l|}{Persona} \\ \hline
+\hline 
+Rut & Nombre & Ocupación & Peso \\ 
+\hline 
+15.654.896-6 & Juan & Trabajador & 70 \\ 
+\hline 
+23.459.786-1 & Maria & Estudiante & 60 \\ 
+\hline 
+\end{tabular} 
+\end{table}
+
+\end{frame}
+
+
+
+
+
 \begin{frame}{Base de datos por sobre hojas de calculo}
 \begin{center}
 \includegraphics[scale=.5]{images/excel-worlds-most-used-database.jpg} 
@@ -143,6 +166,22 @@ Toby            & Canino & No come                       & Juan Piedra  \\ \hlin
 \end{center}
 
 
+\end{frame}
+
+
+\section{Modelamiento}
+
+\begin{frame}{Problema inicial}
+
+Un equipo de investigación desea estudiar los medicamentos que los doctores les dan a sus pacientes. Para ello deciden crear una base de datos, hasta ahora estos son los datos que desean almacenar.
+
+Para cada paciente se desea almacenar su rut, nombre y su diagnostico.
+
+Para cada medicamento guardar su Identificador único, nombre y componente activo.
+
+Para cada doctor, registrar su rut, nombre y área en la que se desempeña.
+
+Tomar en cuenta que cada paciente tiene un solo medico y un paciente puede tomar varios medicamentos a la vez.
 
 \end{frame}
 

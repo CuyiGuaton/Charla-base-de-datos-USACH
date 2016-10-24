@@ -103,37 +103,24 @@ Toby            & Canino & No come                       & Juan Piedra  \\ \hlin
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 \begin{frame}{Componentes de una Base de Datos}
-
-
 \begin{itemize}
 
-\item \textbf{Entidades} Son objetos o cosas. Persona, auto, Habitad, Paciente
+\item \textbf{Entidades} Son objetos o cosas. \textit{Persona, auto, Habitad, Paciente}
 
-\item \textbf{Atributos} Le dan propiedades a la entidad. Persona tiene rut, nombre, peso, etc.
+\item \textbf{Atributos} Le dan propiedades a la entidad. \textit{Persona tiene rut, nombre, peso, etc}.
 
-\item \textbf{Identificadores} Atributo que permite diferenciar una instancia de otra en una entidad. Una se puede diferenciar de otra por su rut.
+\item \textbf{Identificadores} Atributo que permite diferenciar una instancia de otra en una entidad. \textit{Una persona se puede diferenciar de otra por su rut.}
 
 \item  \textbf{Relaciones} Establecen la conexión entre dos o más entidades
 
-
 \end{itemize}
+
+
+\begin{center}
+\includegraphics[scale=0.5]{images/rel.png} 
+\end{center}
+
 
 \end{frame}
 
@@ -153,20 +140,24 @@ Rut & Nombre & Ocupación & Peso \\
 \end{tabular} 
 \end{table}
 
-\end{frame}
-
-
-
-
-
-\begin{frame}{Base de datos por sobre hojas de calculo}
-\begin{center}
-\includegraphics[scale=.5]{images/excel-worlds-most-used-database.jpg} 
-
-\end{center}
-
+La entidad es Persona, sus atributos Rut, nombre, Ocupación y Peso.\\
+El identificador de la entidad es el rut ya que es único.\\
+Juan y María son instancias de la entidad Persona.\\
 
 \end{frame}
+
+
+
+
+
+%\begin{frame}{Base de datos por sobre hojas de calculo}
+%\begin{center}
+%\includegraphics[scale=.5]{images/excel-worlds-most-used-database.jpg} 
+
+%\end{center}
+
+
+%\end{frame}
 
 
 \section{Modelamiento}
@@ -175,11 +166,17 @@ Rut & Nombre & Ocupación & Peso \\
 
 Un equipo de investigación desea estudiar los medicamentos que los doctores les dan a sus pacientes. Para ello deciden crear una base de datos, hasta ahora estos son los datos que desean almacenar.
 
-Para cada paciente se desea almacenar su rut, nombre y su diagnostico.
+\begin{itemize}
 
-Para cada medicamento guardar su Identificador único, nombre y componente activo.
 
-Para cada doctor, registrar su rut, nombre y área en la que se desempeña.
+
+\item Para cada paciente se desea almacenar su rut, nombre y su diagnostico.
+
+\item Para cada medicamento guardar su Identificador único, nombre y componente activo.
+
+\item Para cada doctor, registrar su rut, nombre y área en la que se desempeña.
+
+\end{itemize}
 
 Tomar en cuenta que cada paciente tiene un solo medico y un paciente puede tomar varios medicamentos a la vez.
 

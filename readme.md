@@ -41,6 +41,8 @@ Medico | Rut | E.C. | Sueldo
 Álvaro Pérez | 16.336.789-7 | Soltero | $500.000
 Juan Piedra | 15.533.559-5 | Soltero | $700.000
 
+## Modelamiento
+
 ### Conceptos importantes a la hora de modelar
 
 Una BD esta compuesta principalmente por **entidades** que es la representación de un objeto y esta tiene atributos las cuales dan propiedades a ese objeto.
@@ -54,7 +56,7 @@ Las relaciones por lo general tienen a desaparecer en la implementación de una 
 ![140% center](images/rel.png)
 
 
-## Entidad como una tabla
+### Entidad como una tabla
 
 Un entidad puede ser representada como una tabla, en donde sus atributos son sus columnas, la ocurrencia de la entidad son sus filas.
 
@@ -62,3 +64,26 @@ Rut | Nombre | Ocupación | Peso
 --- | ------ | --------- | -------
 15.654.896-6  |   Juan     |  Trabajador | 70
 23.459.786-1 |    Maria   |     Estudiante | 60
+
+La entidad es Persona, sus atributos Rut, nombre, Ocupación y Peso. <br>
+El identificador de la entidad es el rut ya que es único. <br>
+Juan y María son instancias de la entidad Persona.<br>
+
+### Problema inicial
+
+Un equipo de investigación desea estudiar los medicamentos que los doctores les dan a sus pacientes. Para ello deciden crear una base de datos, hasta ahora estos son los datos que desean almacenar.
+
+
+ - Para cada paciente se desea almacenar su rut, nombre y su diagnostico.
+
+- Para cada medicamento guardar su Identificador único, nombre y componente activo.
+
+- Para cada doctor, registrar su rut, nombre y área en la que se desempeña.
+
+Tomar en cuenta que cada paciente tiene un solo medico y un paciente puede tomar varios medicamentos a la vez.
+
+### Comenzando a crear el modelo entidad-relación
+
+#### Paso 1  detectar las entidades
+
+En el modelo entidad relación  la entidades de representan a través de un rectángulo.

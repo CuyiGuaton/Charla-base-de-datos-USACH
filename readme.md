@@ -104,7 +104,6 @@ En el MER las relaciones entre entidades se representan con un rombo.
 
 En el problema se relacionan las entidades Paciente con medicamente, y Paciente con doctor. por lo que establecen las relaciones entre ellos.
 
-Notece que a pesar de que el doctor da el medicamento a paciente no se estable ninguna relación entre medicamento y doctor, esto es debido a que paciente es el que toma el medicamento y doctor el que le da el medicamiento a paciente, se puede haber establecido una relación entre medicamento y paciente pero
 
 ![](images/2.PNG)
 

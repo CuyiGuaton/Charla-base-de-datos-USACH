@@ -149,17 +149,18 @@ Existen tres tipos de cardinalidades distintas o formas en la que se relación l
  - **Relación 1:1** (uno a uno) Cuando a un elemento de una entidad le corresponde un único elemento de la otra entidad.  
 En el ejemplo un periodista va a escribir una columna en el diario.
 
-![](images/11.PNG)
+![](images/11.png)
 
  - **Relación 1:N** (uno a muchos) Cuando a un elemento de una entidad le corresponden muchos elementos de la otra entidad.  
  En el ejemplo a un alumno se le asigna un solo profesor pero a un profesor se le asignan varios alumnos.
 
-![](images/1n.PNG)
+![](images/1n.png)
 
- **Relación N:M** (Mucho a muchos) Cuando a muchos elementos de una sola entidad le corresponden varios elementos de la otra entidad.  
+- **Relación N:M** (Mucho a muchos) Cuando a muchos elementos de una sola entidad le corresponden varios elementos de la otra entidad.  
+
  En el ejemplo un camionero conduce varios camiones, y un camión puede ser conducido por varios camioneros.
 
- ![](images/nn.PNG)
+ ![](images/nn.png)
 
 
 ### Modelo final
@@ -179,16 +180,29 @@ Al pasar del MER a Modelo relacional se deben eliminar las relaciones entre tabl
 
 Una clave foránea no es nada más que la clave primaria de una tabla dentro de otra tabla con la que se relaciona.
 
-Para propósitos de la charla se trabajara con las trabajas que se obtienen del modelo relacional en vez del mismo modelo en sí, esto para ver de manera didáctica como interactúan y se relacionan las tablas.
+Para propósitos de la charla se trabajara con las tablas que se obtienen del modelo relacional en vez del mismo modelo en sí, esto para ver de manera didáctica como interactúan y se relacionan las tablas.
 
 Se siguen las siguientes reglas.
 
 - __Si la relación es 1:1__ Entonces la clave primaria de una tabla pasa como clave foránea a otra tabla.
 
+![](images/11mr.png)
+
+![](images/11mrt.png)
+
+
 - __Si la relación es 1:N__ Entonces clave primaria de una tabla pasa como clave foránea de la entidad con N.
+![](images/1nmmm.png)
+![](images/11mrt.png)
+
+ - __Si la relación es N:M__ La relación de las dos entidades se convierte en una tabla y tiene como clave primaria las dos claves primarias de las tablas que relaciona.
+
+![](images/NMmr.png)
+
+![](images/nmmrt.png)
 
 
-__Si la relación es N:M__ La relación de las dos entidades se convierte en una tabla y tiene como clave primaria las dos claves primarias de las tablas que relaciona.
+En el ejemplo, las tablas que se obtienen de pasar el de Modelo entidad relación a modelo relacional es:
 
 
 

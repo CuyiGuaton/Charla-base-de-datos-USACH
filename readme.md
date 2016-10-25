@@ -131,4 +131,15 @@ En el caso de que no haya un identificador único entonces de pueden seleccionar
 
 En el MER los atributos en las relaciones no tiene identificadores.
 
-###
+### El concepto de cardinalidad
+
+Se refiere a la forma en que se relacionan las entidades, más que nada a la cantidad de instancias de una entidad que le corresponden a otra entidad.
+Este concepto es importante ya que es el eje principal de las búsquedas cruzadas en las tablas.
+
+Existen tres tipos de cardinalidades distintas o formas en la que se relación las entidades.
+
+ - **Relación 1:1** (uno a uno) Cuando a un elemento de una entidad le corresponde un único elemento de la otra entidad.
+
+ - **Relación 1:N** (uno a muchos) Cuando a un elemento de una entidad le corresponden muchos elementos de la otra entidad.
+
+ **Relación N:M** (Mucho a muchos) Cuando a muchos elementos de una sola entidad le corresponden varios elementos de la otra entidad.

@@ -178,3 +178,41 @@ A esta álgebra se le llama algebra relacional y el lenguaje con el que se imple
 Al pasar del MER a Modelo relacional se deben eliminar las relaciones entre tablas, pero aun así debe quedar claro como se relacionan ambas tablas. Para lograr esto es que se debe agregar un nuevo atributo a las entidades, este atributo es la clave foránea.
 
 Una clave foránea no es nada más que la clave primaria de una tabla dentro de otra tabla con la que se relaciona.
+
+Para propósitos de la charla se trabajara con las trabajas que se obtienen del modelo relacional en vez del mismo modelo en sí, esto para ver de manera didáctica como interactúan y se relacionan las tablas.
+
+Se siguen las siguientes reglas.
+
+- __Si la relación es 1:1__ Entonces la clave primaria de una tabla pasa como clave foránea a otra tabla.
+
+- __Si la relación es 1:N__ Entonces clave primaria de una tabla pasa como clave foránea de la entidad con N.
+
+
+__Si la relación es N:M__ La relación de las dos entidades se convierte en una tabla y tiene como clave primaria las dos claves primarias de las tablas que relaciona.
+
+
+
+
+# Material De ayuda
+
+#### Base de datos en proyectos de investigación
+
+https://www.lluiscodina.com/como-disenar-una-base-de-datos-para-nuestro-proyecto-de-investigacion/
+
+#### Sobre el modelo entidad relación
+
+http://www.genbetadev.com/bases-de-datos/fundamento-de-las-bases-de-datos-modelo-entidad-relacion
+
+#### Transformar de modelo entidad relación a Modelo relacional (explicado de MER a tablas)
+
+http://www.esferatic.com/2012/05/bases-de-datos-iii-diseno-logico/
+
+#### Implementando una BD en access
+
+https://www.gcfaprendelibre.org/tecnologia/curso/access_2010/conociendo_la_interfaz_de_acces/7.do
+
+#### Otros
+
+https://support.office.com/es-es/article/Crear-una-nueva-base-de-datos-32a1ea1c-a155-43d6-aa00-f08cd1a8f01e
+
+https://support.office.com/es-es/article/Conceptos-b%C3%A1sicos-del-dise%C3%B1o-de-una-base-de-datos-1eade2bf-e3a0-41b5-aee6-d2331f158280#bmdesignprocess

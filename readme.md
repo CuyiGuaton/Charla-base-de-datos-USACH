@@ -96,6 +96,8 @@ En el modelo entidad relación  la entidades de representan a través de un rect
 
 En el caso del problema podemos afirmar que las entidades son paciente medicamento y doctor, ya que son objetos que tienen atributos propios.
 
+![](images/1.PNG)
+
 #### Detectar las relaciones
 
 En el MER las relaciones entre entidades se representan con un rombo.
@@ -104,6 +106,7 @@ En el problema se relacionan las entidades Paciente con medicamente, y Paciente 
 
 Notece que a pesar de que el doctor da el medicamento a paciente no se estable ninguna relación entre medicamento y doctor, esto es debido a que paciente es el que toma el medicamento y doctor el que le da el medicamiento a paciente, se puede haber establecido una relación entre medicamento y paciente pero
 
+![](images/2.PNG)
 
 #### Identificar los atributos de las entidades
 
@@ -117,9 +120,13 @@ Cada medicamento tiene un Identificador único, nombre y un componente activo.
 
 Nótese que el rut de paciente se identifica con rutP y el del doctor con RutP para poder diferenciarlos en una futura búsqueda cruzada luego de su implementación.
 
+![](images/3.PNG)
+
 ### Identificar los atributos de las relaciones
 
 Las relaciones también pueden llevar atributos, esto es debido a que muchos pacientes pueden tomar muchos medicamentos, por lo que la cantidad a tomar de cada medicamento no es atributo propio de ninguna entidad, pero si de la relación entre estas.
+
+![](images/4.PNG)
 
 ### Establecer los identificadores de las entidades
 
@@ -131,6 +138,8 @@ En el caso de que no haya un identificador único entonces de pueden seleccionar
 
 En el MER los atributos en las relaciones no tiene identificadores.
 
+![](images/5.PNG)
+
 ### El concepto de cardinalidad
 
 Se refiere a la forma en que se relacionan las entidades, más que nada a la cantidad de instancias de una entidad que le corresponden a otra entidad.
@@ -138,8 +147,31 @@ Este concepto es importante ya que es el eje principal de las búsquedas cruzada
 
 Existen tres tipos de cardinalidades distintas o formas en la que se relación las entidades.
 
- - **Relación 1:1** (uno a uno) Cuando a un elemento de una entidad le corresponde un único elemento de la otra entidad.
+ - **Relación 1:1** (uno a uno) Cuando a un elemento de una entidad le corresponde un único elemento de la otra entidad.  
+En el ejemplo un periodista va a escribir una columna en el diario.
 
- - **Relación 1:N** (uno a muchos) Cuando a un elemento de una entidad le corresponden muchos elementos de la otra entidad.
+![](images/11.PNG)
 
- **Relación N:M** (Mucho a muchos) Cuando a muchos elementos de una sola entidad le corresponden varios elementos de la otra entidad.
+ - **Relación 1:N** (uno a muchos) Cuando a un elemento de una entidad le corresponden muchos elementos de la otra entidad.  
+ En el ejemplo a un alumno se le asigna un solo profesor pero a un profesor se le asignan varios alumnos.
+
+![](images/1n.PNG)
+
+ **Relación N:M** (Mucho a muchos) Cuando a muchos elementos de una sola entidad le corresponden varios elementos de la otra entidad.  
+ En el ejemplo un camionero conduce varios camiones, y un camión puede ser conducido por varios camioneros.
+
+ ![](images/nn.PNG)
+
+
+### Modelo final
+
+![](images/6.PNG)
+
+## Modelo relacional
+
+Una vez terminado el modelo entidad relacional se tiene hecho la mitad del modelamiento, esto es debido el modelo entidad relación solo sirve para representar una idea. Para poder implementarla en un sistema de gestión de base de datos se requiere llevar el modelo entidad relación a un modelo relacional, este modelo nos va a dar una base algebraica en la que cada entidad se va a poder ver como un conjunto dentro de la cuál se puede hacen   operaciones de unión, intersección, resta, selección, etc.  
+A esta álgebra se le llama algebra relacional y el lenguaje con el que se implementa se le llama SQL.
+
+![](images/mr.PNG)
+
+###

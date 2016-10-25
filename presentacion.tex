@@ -27,6 +27,8 @@
 
 \section{El concepto Base de datos}
 
+\subsection{Definición Base de datos}
+
 \begin{frame}{¿Qué es una base de datos?}
 Es una herramienta para recopilar y organizar grandes cantidades de información de manera estructurada y con la menor redundancia posible.
 
@@ -36,6 +38,8 @@ Es una herramienta para recopilar y organizar grandes cantidades de información
 \end{center}
 
 \end{frame}
+
+\subsection{Ventajas dentro de un provecto científico}
 
 \begin{frame}{Base de datos dentro de un proyecto científico}
 
@@ -107,7 +111,7 @@ Toby            & Canino & No come                       & Juan Piedra  \\ \hlin
 
 
 
-
+\subsection{Antes de Modelar}
 
 \begin{frame}{Conceptos importantes }
 \begin{itemize}
@@ -159,9 +163,9 @@ La creación de una base de datos se divide en tres partes.
 \begin{enumerate}
 \item Modelo conceptual
 
-\item Diseño lógico
+\item Modelo lógico
 
-\item Diseño 
+\item Implementación en un SGBD 
 \end{enumerate}
 
 
@@ -300,6 +304,7 @@ Tomar en cuenta que cada paciente tiene un solo medico y un paciente puede tomar
 \end{center}
 \end{frame}
 
+\subsection{Modelo Relacional}
 
 \begin{frame}{Implementando la base de datos}
 
@@ -347,10 +352,21 @@ A la hora de pasar el Modelo conceptual a lógico hay tres reglas.
  \textbf{Si la relación es N:M} La relación de las dos entidades se convierte en una tabla y tiene como clave primaria las dos claves primarias de las tablas que relaciona.
 
 \begin{center}
-\includegraphics[scale=.4]{images/NMmr.png} 
+\includegraphics[scale=.5]{images/NMmr.png} 
 \end{center}
 \begin{center}
-\includegraphics[scale=.7]{images/nmmrt.png} 
+\includegraphics[scale=.6]{images/nmmrt.png} 
 \end{center}
 \end{frame}
+
+
+\begin{frame}
+
+Por lo que nuestra base de datos vista desde un modelo lógico es así.
+
+\begin{center}
+\includegraphics[scale=.7]{images/tablafinal.png} 
+\end{center}
+\end{frame}
+
 \end{document}

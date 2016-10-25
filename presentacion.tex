@@ -6,6 +6,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
+\usepackage{multicol}
 \author{Sergio Salinas}
 \title{Modelamiento base de datos para tu proyecto científico}
 %\setbeamercovered{transparent} 
@@ -151,6 +152,24 @@ Juan y María son instancias de la entidad Persona.\\
 
 \end{frame}
 
+\begin{frame}{Creando una base de datos}
+
+La creación de una base de datos se divide en tres partes.
+
+\begin{enumerate}
+\item Modelo conceptual
+
+\item Diseño lógico
+
+\item Diseño 
+\end{enumerate}
+
+
+
+\end{frame}
+
+
+
 \subsection{Modelo Entidad Relación}
 
 
@@ -282,22 +301,43 @@ Tomar en cuenta que cada paciente tiene un solo medico y un paciente puede tomar
 \end{frame}
 
 
-\subsection{Modelo Relacional}
+\begin{frame}{Implementando la base de datos}
 
-\begin{frame}{Modelo Relacional}
+Una vez obtenido el modelo conceptual de la base de datos solo falta obtener las tablas que se implementaran en el sistema de gestión de base de datos. 
 
-Este modelo nos va a permitir la implementación de la base de datos en  un sistema de gestión de base de datos (SGBD) y poder hacer búsquedas cruzadas entre tablas.
+A esta etapa se le denomina diseño lógico y esta basado en el modelo relacional.
+
+A la hora de pasar el Modelo conceptual a lógico hay tres reglas.
+\end{frame}
+
+
+\begin{frame}{Representando las relaciones}
+
+
+
+ \textbf{Si la relación es 1:1} Entonces el identificador de una tabla pasa como atributo a otra tabla.
 
 \begin{center}
-\includegraphics[scale=.4]{images/mr} 
+\includegraphics[scale=.5]{images/11mr.png} 
+\end{center}
+\begin{center}
+\includegraphics[scale=0.7]{images/11mrt.png} 
 \end{center}
 \end{frame}
 
-\begin{frame}{Definiendo las claves foráneas}
 
-Para tranformar de MED a MR se debe
 
+\begin{frame}{Representando las relaciones}
+
+
+ \textbf{Si la relación es 1:N} Entonces el identificador de una tabla pasa como atributo de la entidad con N.
+
+\begin{center}
+\includegraphics[scale=.4]{images/1nmmm.png} 
+\end{center}
+\begin{center}
+\includegraphics[scale=.7]{images/1Nmrt.png} 
+\end{center}
 \end{frame}
-
 
 \end{document}

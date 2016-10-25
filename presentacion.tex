@@ -102,8 +102,12 @@ Toby            & Canino & No come                       & Juan Piedra  \\ \hlin
 \end{frame}
 
 
+\section{Modelamiento de la base de datos}
 
-\begin{frame}{Componentes de una Base de Datos}
+
+
+
+\begin{frame}{Conceptos importantes }
 \begin{itemize}
 
 \item \textbf{Entidades} Son objetos o cosas. \textit{Persona, auto, Habitad, Paciente}
@@ -148,19 +152,27 @@ Juan y María son instancias de la entidad Persona.\\
 
 
 
+\begin{frame}{El modelo entidad relación}
+
+\begin{center}
+\includegraphics[scale=0.3]{images/erd.jpg} 
+
+\end{center}
+
+\end{frame}
+
 
 
 %\begin{frame}{Base de datos por sobre hojas de calculo}
 %\begin{center}
 %\includegraphics[scale=.5]{images/excel-worlds-most-used-database.jpg} 
-
 %\end{center}
 
 
 %\end{frame}
 
 
-\section{Modelamiento}
+
 
 \begin{frame}{Problema inicial}
 
@@ -178,7 +190,45 @@ Un equipo de investigación desea estudiar los medicamentos que los doctores les
 
 \end{itemize}
 
-Tomar en cuenta que cada paciente tiene un solo medico y un paciente puede tomar varios medicamentos a la vez.
+Tomar en cuenta que cada paciente tiene un solo medico y un paciente puede tomar varios medicamentos a la vez, por lo que se debe guardar también cuantos medicamentos toma cada paciente.
+
+\end{frame}
+
+
+\begin{frame}{Identificando las entidades}
+
+\begin{center}
+\includegraphics[scale=.5]{images/1} 
+\end{center}
+
+
+\end{frame}
+
+\begin{frame}{Estableciendo las relaciones}
+
+\begin{center}
+\includegraphics[scale=.5]{images/2} 
+\end{center}
+
+\end{frame}
+
+
+
+\begin{frame}{Identificando los atributos de las entidades}
+
+\begin{center}
+\includegraphics[scale=.5]{images/3} 
+\end{center}
+
+\end{frame}
+
+
+\begin{frame}{Identificando los atributos de las relaciones}
+
+
+\begin{center}
+\includegraphics[scale=.47]{images/4} 
+\end{center}
 
 \end{frame}
 

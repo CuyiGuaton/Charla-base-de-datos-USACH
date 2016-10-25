@@ -41,7 +41,7 @@ Medico | Rut | E.C. | Sueldo
 Álvaro Pérez | 16.336.789-7 | Soltero | $500.000
 Juan Piedra | 15.533.559-5 | Soltero | $700.000
 
-## Modelamiento
+
 
 ### Conceptos importantes a la hora de modelar
 
@@ -73,14 +73,18 @@ Juan y María son instancias de la entidad Persona.<br>
 
 Un equipo de investigación desea estudiar los medicamentos que los doctores les dan a sus pacientes. Para ello deciden crear una base de datos, hasta ahora estos son los datos que desean almacenar.
 
-
  - Para cada paciente se desea almacenar su rut, nombre y su diagnostico.
 
 - Para cada medicamento guardar su Identificador único, nombre y componente activo.
 
 - Para cada doctor, registrar su rut, nombre y área en la que se desempeña.
 
-Tomar en cuenta que cada paciente tiene un solo medico y un paciente puede tomar varios medicamentos a la vez.
+Tomar en cuenta que cada paciente tiene un solo medico y un paciente puede tomar varios medicamentos a la vez, por lo que se debe guardar también la cantidad medicamentos toma cada paciente.
+
+
+## El modelo Entidad relación
+
+Es un método que nos permite diseñar nuestra base de datos, nos va a permitir representar una abstracción en un diagrama que sea fácilmente legible y entendible para cualquiera que lo vea.
 
 ### Comenzando a crear el modelo entidad-relación
 

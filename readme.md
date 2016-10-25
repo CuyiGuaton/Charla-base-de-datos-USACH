@@ -69,6 +69,12 @@ La entidad es Persona, sus atributos Rut, nombre, Ocupación y Peso. <br>
 El identificador de la entidad es el rut ya que es único. <br>
 Juan y María son instancias de la entidad Persona.<br>
 
+## El modelo Entidad relación
+
+Es un método que nos permite diseñar nuestra base de datos, nos va a permitir representar una abstracción en un diagrama que sea fácilmente legible y entendible para cualquiera que lo vea.
+
+### Comenzando a crear el modelo entidad-relación
+
 ### Problema inicial
 
 Un equipo de investigación desea estudiar los medicamentos que los doctores les dan a sus pacientes. Para ello deciden crear una base de datos, hasta ahora estos son los datos que desean almacenar.
@@ -82,11 +88,7 @@ Un equipo de investigación desea estudiar los medicamentos que los doctores les
 Tomar en cuenta que cada paciente tiene un solo medico y un paciente puede tomar varios medicamentos a la vez, por lo que se debe guardar también la cantidad medicamentos toma cada paciente.
 
 
-## El modelo Entidad relación
 
-Es un método que nos permite diseñar nuestra base de datos, nos va a permitir representar una abstracción en un diagrama que sea fácilmente legible y entendible para cualquiera que lo vea.
-
-### Comenzando a crear el modelo entidad-relación
 
 #### Paso 1  detectar las entidades
 
@@ -125,4 +127,8 @@ Los identificares se representan con subrayado en el nombre del identificador.
 
 El identificador es el atributo que es único y no se repite. A partir a ahora se le llamara al identificador clave primaria.
 
+En el caso de que no haya un identificador único entonces de pueden seleccionar uno o más atributos para ser la clave primaria de la entidad.
+
 En el MER los atributos en las relaciones no tiene identificadores.
+
+###

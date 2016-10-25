@@ -47,7 +47,7 @@ Juan Piedra | 15.533.559-5 | Soltero | $700.000
 
 Una BD esta compuesta principalmente por **entidades** que es la representación de un objeto y esta tiene atributos las cuales dan propiedades a ese objeto.
 
-Además cuando un atributo especial sirve para distinguir una instancia de otra en una entidad se le llama **identificador**. Es único para cada instancia, por lo que no se puede repetir su valor.
+Además cuando un atributo especial sirve para distinguir una instancia de otra en una entidad se le llama **identificador**. Es único para cada instancia, por lo que no se puede repetir su valor, también se les llama clave primaria
 
 Las entidades no están solas, se conectan entre ellas a través de **relaciones**, que se encargan de esclarecer el vinculo entre dos o más entidades.
 
@@ -91,3 +91,38 @@ Es un método que nos permite diseñar nuestra base de datos, nos va a permitir 
 #### Paso 1  detectar las entidades
 
 En el modelo entidad relación  la entidades de representan a través de un rectángulo.
+
+En el caso del problema podemos afirmar que las entidades son paciente medicamento y doctor, ya que son objetos que tienen atributos propios.
+
+#### Detectar las relaciones
+
+En el MER las relaciones entre entidades se representan con un rombo.
+
+En el problema se relacionan las entidades Paciente con medicamente, y Paciente con doctor. por lo que establecen las relaciones entre ellos.
+
+Notece que a pesar de que el doctor da el medicamento a paciente no se estable ninguna relación entre medicamento y doctor, esto es debido a que paciente es el que toma el medicamento y doctor el que le da el medicamiento a paciente, se puede haber establecido una relación entre medicamento y paciente pero
+
+
+#### Identificar los atributos de las entidades
+
+Los atributos son las propiedades de las entidades, se representan con una circunferencia.
+
+En este caso paciente tiene un rut, nombre y un diagnostico.
+
+Doctor tiene un Rut, nombre y una especialización.
+
+Cada medicamento tiene un Identificador único, nombre y un componente activo.
+
+Nótese que el rut de paciente se identifica con rutP y el del doctor con RutP para poder diferenciarlos en una futura búsqueda cruzada luego de su implementación.
+
+### Identificar los atributos de las relaciones
+
+Las relaciones también pueden llevar atributos, esto es debido a que muchos pacientes pueden tomar muchos medicamentos, por lo que la cantidad a tomar de cada medicamento no es atributo propio de ninguna entidad, pero si de la relación entre estas.
+
+### Establecer los identificadores de las entidades
+
+Los identificares se representan con subrayado en el nombre del identificador.
+
+El identificador es el atributo que es único y no se repite. A partir a ahora se le llamara al identificador clave primaria.
+
+En el MER los atributos en las relaciones no tiene identificadores.

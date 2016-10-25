@@ -174,4 +174,8 @@ A esta álgebra se le llama algebra relacional y el lenguaje con el que se imple
 
 ![](images/mr.PNG)
 
-###
+### Transformar de MED a MR
+
+Al pasar del MER a Modelo relacional se deben eliminar las relaciones entre tablas, pero aun así debe quedar claro como se relacionan ambas tablas. Para lograr esto es que se debe agregar un nuevo atributo a las entidades, este atributo es la clave foránea.
+
+Una clave foránea no es nada más que la clave primaria de una tabla dentro de otra tabla con la que se relaciona.

@@ -1,6 +1,12 @@
 # Base de datos para tu proyecto científico
 
-## Que es una base de datos
+El objetivo de esta charla es mostrar los elementos escenciales para modelar una base de datos básica que permita almacenar los datos de un proyecto sin entorpecer al proyecto mismo a la hora de analizar lor datos. Se explica como crear el diseño conceptual usando el modelo entidad relación y se muestra como obtener las tablas a implementar a partir del modelo relacional, aunque sin explicar este directamente.
+
+Además se agrega material de ayuda para implementarla en un sistema de gestión de base de datos y se da un ejemplo de una BD relacional implementada en LibreOffice Base.
+
+
+
+## Qué es una base de datos
 
 Es una herramienta que nos permite recopilar y almacenar grandes cantidades de información de manera estructurada y con la menor redundancia posible
 
@@ -204,7 +210,17 @@ Se siguen las siguientes reglas.
 
 En el ejemplo, las tablas que se obtienen de pasar el de Modelo entidad relación a modelo relacional es:
 
+![](images/tablafinal.png)
 
+### Vista desde el Modelo relacional
+
+![](images/finalmodelmr.png)
+
+# Conclusión
+
+Las base de datos nos una gran ventaja a la hora de hacer proyectos de investigación, permitiendo almacenar información de manera estructurada y poder ver información nueva a través de la que tiene.
+
+Como contraparte, se quiere una curva de aprendizaje modelar e implementar una base de datos, pero con lo visto en la charla, se puede modelar, que por más básica que una la vea, nos va a permitir almacenar toda la información que recolectemos sin entorpecer la investigación.
 
 
 # Material De ayuda
